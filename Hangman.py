@@ -1,4 +1,3 @@
-
 import random
 movies = ['lagaan','highway','thor','dangal','newton']
 pp1 = 10
@@ -53,7 +52,9 @@ def play():
     not_said=True
     while(not_said):
         letter=input("Your letter: ")
-        if(is_present(letter,temp_movie)):
+        if letter =="":
+            print("enter a character")
+        elif(is_present(letter,temp_movie)):
             temp_movie = picked_movie.replace(letter,"")
             pp1+=3
             print(pp1)
